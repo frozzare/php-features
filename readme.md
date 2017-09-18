@@ -18,6 +18,10 @@ features()->enable('log');
 if (features()->enabled('log')) {
     ...
 }
+
+...
+
+features()->disable('log');
 ```
 
 ## License
