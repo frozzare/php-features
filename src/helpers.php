@@ -4,10 +4,18 @@ if (!function_exists('features')) {
     /**
      * Get features class instance.
      *
+     * @param  array $data
+     *
      * @return \Frozzare\Features\Features
      */
-    function features()
+    function features(array $data = [])
     {
-        return \Frozzare\Features\Features::instance();
+        $features = \Frozzare\Features\Features::instance($data);
+
+        if (!empty($data)) {
+            $features->setData($data);
+        }
+
+        return $features;
     }
 }

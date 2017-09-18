@@ -11,6 +11,12 @@ $ composer require frozzare/features
 ## Example
 
 ```php
+features([
+    'log' => false
+]);
+
+...
+
 features()->enable('log');
 
 ...

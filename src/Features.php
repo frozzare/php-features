@@ -9,7 +9,7 @@ class Features
      *
      * @var array
      */
-    protected $features = [];
+    protected $data = [];
 
     /**
      * Features class instance.
@@ -33,6 +33,16 @@ class Features
     }
 
     /**
+     * Features constructor.
+     *
+     * @param  array $data
+     */
+    public function __constructor(array $data = [])
+    {
+        $this->setData($data);
+    }
+
+    /**
      * Determine if a feature is enabled or not.
      *
      * @param  string $key
@@ -41,7 +51,7 @@ class Features
      */
     public function enabled($key)
     {
-        return isset($this->features[$key]) && $this->features[$key];
+        return isset($this->data[$key]) && $this->data[$key];
     }
 
     /**
@@ -51,7 +61,7 @@ class Features
      */
     public function enable($key)
     {
-        $this->features[$key] = true;
+        $this->data[$key] = true;
     }
 
     /**
@@ -61,8 +71,18 @@ class Features
      */
     public function disable($key)
     {
-        if (isset($this->features[$key])) {
-            unset($this->features[$key]);
+        if (isset($this->data[$key])) {
+            unset($this->data[$key]);
         }
+    }
+
+    /**
+     * Set features data.
+     *
+     * @param  array $data
+     */
+    public function setData(array $data = [])
+    {
+        $this->data = $data;
     }
 }

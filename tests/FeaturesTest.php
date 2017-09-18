@@ -12,4 +12,15 @@ class FeaturesTest extends \PHPUnit\Framework\TestCase
         features()->disable('test');
         $this->assertFalse(features()->enabled('test'));
     }
+
+    public function testFeaturesWithDefaultData()
+    {
+        features([
+            'test' => true
+        ]);
+
+        $this->assertTrue(features()->enabled('test'));
+        features()->disable('test');
+        $this->assertFalse(features()->enabled('test'));
+    }
 }
