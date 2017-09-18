@@ -3,6 +3,10 @@
     "type": "utility",
     "license": "MIT",
     "description": "Simple package for feature flag-driven development",
+    "keywords": [
+        "feature",
+        "features"
+    ],
     "require": {
         "php": "^7.0"
     },
