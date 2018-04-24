@@ -23,4 +23,15 @@ class FeaturesTest extends \PHPUnit\Framework\TestCase
         features()->disable('test');
         $this->assertFalse(features()->enabled('test'));
     }
+
+    public function testGetFeaturesData()
+    {
+        features([
+            'test' => true
+        ]);
+
+        $this->assertSame([
+            'test' => true,
+        ], features()->getData());
+    }
 }

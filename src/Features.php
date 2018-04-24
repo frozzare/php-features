@@ -77,6 +77,16 @@ class Features
     }
 
     /**
+     * Get features data.
+     *
+     * @return array
+     */
+    public function getData()
+    {
+        return $this->data;
+    }
+
+    /**
      * Set features data.
      *
      * @param  array $data
