@@ -1,6 +1,6 @@
 # features [![Build Status](https://travis-ci.org/frozzare/php-features.svg?branch=master)](https://travis-ci.org/frozzare/php-features)
 
-Simple package for feature flag-driven development.
+Simple package for feature flagging interface/implementation.
 
 ## Installation
 
