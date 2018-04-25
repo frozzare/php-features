@@ -2,7 +2,7 @@
     "name": "frozzare/features",
     "type": "utility",
     "license": "MIT",
-    "description": "Simple package for feature flag-driven development",
+    "description": "Simple package for feature flagging interface/implementation",
     "keywords": [
         "feature",
         "features"
